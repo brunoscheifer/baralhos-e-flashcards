@@ -33,12 +33,34 @@ let opcao = prompt('Oque voçê quer fazer?: ')
 
 switch(opcao) {
     case '1':
+        let titulo = prompt('Qual o novo titulo?: ')
+
+        criarBaralho({ titulo })
+        console.log('Baralho adicionado!!')
+        
+        exibirMenu()
         break;
     case '2':
+        let pergunta = prompt('Qual a pergunta?: ')
+        let resposta = prompt('Qual a resposta da pergunta?: ')
+        let idBaralho = prompt('Qual o id do baralho que sera adicionado o flashcard?: ')
+
+        criarFlashcard({ pergunta, resposta, idBaralho })
+        console.log('Flahcard adicionado!!')
+
+        exibirMenu()
         break;
     case '3':
+        
+        listarBaralhos()
+        exibirMenu()
+
         break;
     case '4':
+
+        listarFlashcards()
+        exibirMenu()
+        
         break;
     case '5':
         break;
