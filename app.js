@@ -60,11 +60,17 @@ switch(opcao) {
 
         listarFlashcards()
         exibirMenu()
-        
+
         break;
     case '5':
+        let mostrarPorIdBaralho = prompt('Qual o id do Baralho para Mostar seus flashcards')
+
+        listarFlashcardsPorBaralhoId(mostrarPorIdBaralho)
+
+        exibirMenu()
         break;
     case '6':
+
         break;
     case '7':
         break;
