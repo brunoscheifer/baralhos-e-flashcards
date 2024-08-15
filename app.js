@@ -63,16 +63,37 @@ switch(opcao) {
 
         break;
     case '5':
-        let mostrarPorIdBaralho = prompt('Qual o id do Baralho para Mostar seus flashcards')
+        let id = parseInt(prompt('Qual o id do baralho para mostrar seus flashcards?: '))
 
-        listarFlashcardsPorBaralhoId(mostrarPorIdBaralho)
+        listarFlashcardsPorBaralhoId(id)
 
         exibirMenu()
         break;
     case '6':
+        listarBaralhos()
 
+        let idAtualizar = parseInt(prompt('Qual o id do baralho que deseja atualizar?: '))
+
+        let novoTitulo = prompt('Qual o novo titulo');
+
+        atualizarBaralho(idAtualizar, {titulo: novoTitulo})
+        console.log('Atualizado!!')
+
+        exibirMenu()
         break;
     case '7':
+        listarFlashcards()
+
+        let idAtualizar2 = parseInt(prompt('Qual o id do flashcard que deseja atualizar?: '))
+
+        let novaPegunta = prompt('Qual a nova pergunta?: ')
+        let novaResposta = prompt('Qual a nova resposta?: ')
+        let novoBaralho = parseInt(prompt('Qual onovo baralho: '))
+
+        atualizarFlashcard(idAtualizar2, {pergunta: novaPegunta, resposta: novaResposta, idBaralho: novoBaralho})
+        console.log('Atualizado!')
+
+        exibirMenu()
         break;
     case '8':
         break;

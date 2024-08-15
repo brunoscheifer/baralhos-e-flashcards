@@ -1,7 +1,9 @@
 let { flashcards } = require('../data')
 
 function findFlashcardIndexById(id) {   
-    return flashcards.find(flashcard => flashcard.id === id)
+    let index = flashcards.findIndex(flashcard => flashcard.id === id)
+
+    return index
 
 }
 
