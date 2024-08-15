@@ -96,12 +96,38 @@ switch(opcao) {
         exibirMenu()
         break;
     case '8':
+        listarBaralhos()
+
+        let idRemover = parseInt(prompt('Qual baralho deseja deletar?: '))
+
+        deletarBaralho(idRemover)
+        console.log('Removido!!')
+
+        exibirMenu()
         break;
     case '9':
+        listarFlashcards()
+
+        let idRemover2 = parseInt(prompt('Qual flashcard deseja deletar?: '))
+
+        deletarFlashcard(idRemover2)
+        console.log('Removido!!')
+
+        exibirMenu()
         break;
     case '10':
+        let buscar = parseInt(prompt('Qual o baralho que tem os flashcards que voçê quer?: '))
+
+        buscarFlashcardsPorBaralho(buscar)
+
+        exibirMenu()
         break;
     case '11':
+        let buscar2 = prompt('Qual pergunta que voçê quer achar?: ')
+
+        buscarFlashcardsPorPergunta(buscar2)
+
+        exibirMenu()
         break;
     case '0':
         break;
