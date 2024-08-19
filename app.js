@@ -43,7 +43,7 @@ switch(opcao) {
     case '2':
         let pergunta = prompt('Qual a pergunta?: ')
         let resposta = prompt('Qual a resposta da pergunta?: ')
-        let idBaralho = prompt('Qual o id do baralho que sera adicionado o flashcard?: ')
+        let idBaralho = parseInt(prompt('Qual o id do baralho que sera adicionado o flashcard?: '))
 
         criarFlashcard({ pergunta, resposta, idBaralho })
         console.log('Flahcard adicionado!!')
